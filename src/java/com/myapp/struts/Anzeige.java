@@ -6,17 +6,17 @@
 package com.myapp.struts;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Date;
 import javax.persistence.ManyToMany;
+
 /**
  *
  * @author Hendrik
  */
-public class Datenmodell {
-    @Entity
+@Entity
     public class Anzeige implements Serializable{
         //Schluessel
         @Id
@@ -34,28 +34,6 @@ public class Datenmodell {
         private int plz = 0;
         private String ort = "";
         
-        @ManyToMany
-        Kategorie kategorie = new Kategorie();
-    }
-    
-    public class Kategorie implements Serializable{
-        @Id
-        @GeneratedValue
-        private long slug = 0;
         
-        private String name = "";
         
     }
-    
-    public class Benutzer implements Serializable{
-        
-    }
-    
-    public class Nachricht implements Serializable{
-        
-    }
-    
-    public class Foto implements Serializable{
-        
-    }
-}
