@@ -34,7 +34,8 @@ public class Benutzer implements Serializable{
     private String mail = "";
     private int tel = 0;
     
-    @OneToMany
+    //(mappedBy="Benutzer")?
+    @OneToMany 
     List<Nachricht> nachrichten = new ArrayList<>(); 
     
     @ManyToMany

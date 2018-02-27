@@ -25,4 +25,8 @@ public class Nachricht implements Serializable{
         private String zuArtikel = "";
         private String text = "";
         
+        /*@ManyToOne
+         *Benutzer benutzer=null;
+         */
+        
 }

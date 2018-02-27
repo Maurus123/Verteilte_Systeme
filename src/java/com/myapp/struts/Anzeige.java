@@ -38,6 +38,7 @@ import javax.persistence.OneToMany;
         private int plz = 0;
         private String ort = "";
         
+        //Sicher das Anzeige Benutzer kennt?
         @ManyToOne
         Benutzer benutzer = new Benutzer();
         
