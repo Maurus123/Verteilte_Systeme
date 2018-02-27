@@ -6,11 +6,15 @@
 package com.myapp.struts;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -33,6 +37,19 @@ import javax.persistence.ManyToMany;
         private String artDesPreises = "";
         private int plz = 0;
         private String ort = "";
+        
+        @ManyToOne
+        Benutzer benutzer = new Benutzer();
+        
+        @ManyToMany
+        List<Benutzer> benutzerList = new ArrayList<>();
+        
+        @OneToMany
+        List<Foto> fotos = new ArrayList<>();
+        
+        @ManyToMany
+        List<Kategorie> kategorien = new ArrayList<>();
+        
         
         
         
