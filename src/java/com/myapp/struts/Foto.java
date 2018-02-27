@@ -7,6 +7,8 @@ package com.myapp.struts;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
@@ -14,5 +16,11 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Foto implements Serializable{
+        @Id
+        @GeneratedValue
+        private long id = 0;
+        
+        private String bezeichnung = "";
+        private String bildDaten = "";
         
 }
