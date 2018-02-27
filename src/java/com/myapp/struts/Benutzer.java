@@ -5,6 +5,7 @@
  */
 package com.myapp.struts;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 
 /**
@@ -12,6 +13,6 @@ import javax.persistence.Entity;
  * @author Hendrik
  */
 @Entity
-public class Benutzer {
+public class Benutzer implements Serializable{
     
 }
