@@ -6,9 +6,13 @@
 package com.myapp.struts;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -21,5 +25,11 @@ public class Kategorie implements Serializable{
         private long slug = 0;
         
         private String name = "";
+        
+        //@ManyToMany
+        //List<Anzeige> anzeigen = new ArrayList<>();
+        
+        @OneToMany
+        List<Kategorie> kategorien = new ArrayList<>();
         
     }

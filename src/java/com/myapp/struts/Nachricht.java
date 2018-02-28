@@ -9,6 +9,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -25,8 +26,8 @@ public class Nachricht implements Serializable{
         private String zuArtikel = "";
         private String text = "";
         
-        /*@ManyToOne
-         *Benutzer benutzer=null;
-         */
+        @ManyToOne
+        Benutzer benutzer=null;
+        
         
 }

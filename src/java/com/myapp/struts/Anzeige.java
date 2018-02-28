@@ -39,12 +39,12 @@ import javax.persistence.OneToMany;
         private String ort = "";
         
         //Sicher das Anzeige Benutzer kennt?
-        @ManyToOne
+        /*@ManyToOne
         Benutzer benutzer = new Benutzer();
         
         @ManyToMany
         List<Benutzer> benutzerList = new ArrayList<>();
-        
+        */
         @OneToMany
         List<Foto> fotos = new ArrayList<>();
         
